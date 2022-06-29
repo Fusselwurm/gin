@@ -183,6 +183,7 @@ func (r AsciiJSON) WriteContentType(w http.ResponseWriter) {
 func (r PureJSON) Render(w http.ResponseWriter) error {
 	r.WriteContentType(w)
 	encoder := json.NewEncoder(w)
+	encoder.SetNilSafeCollection(true)
 	encoder.SetEscapeHTML(false)
 	return encoder.Encode(r.Data)
 }

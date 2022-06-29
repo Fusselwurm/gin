@@ -8,7 +8,7 @@ import "github.com/homelight/json"
 
 var (
 	// Marshal is exported by gin/json package.
-	Marshal = json.Marshal
+	Marshal = json.MarshalSafeCollections
 	// Unmarshal is exported by gin/json package.
 	Unmarshal = json.Unmarshal
 	// MarshalIndent is exported by gin/json package.
