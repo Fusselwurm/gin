@@ -2,12 +2,12 @@
 // Use of this source code is governed by a MIT style
 // license that can be found in the LICENSE file.
 
-//go:build !jsoniter && !go_json && !homelight_json
-// +build !jsoniter,!go_json,!homelight_json
+//go:build homelight_json
+// +build homelight_json
 
 package json
 
-import "encoding/json"
+import "github.com/homelight/json"
 
 var (
 	// Marshal is exported by gin/json package.
